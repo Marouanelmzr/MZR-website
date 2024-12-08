@@ -4,7 +4,9 @@ import Searchicon from './assets/Searchicon'
 import Shoppingbag from "./assets/Shoppingbag";
 import Loginicon from "./assets/Loginicone";
 import { FaBars } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useScrollBlock } from "./useScrollBlock";
+import { IoClose } from "react-icons/io5";
 
 function Navbar() {
     
@@ -14,9 +16,19 @@ function Navbar() {
         setIsOpen(!isOpen);
     };
 
+    const [blockScroll, allowScroll] = useScrollBlock();
+    useEffect(() => {
+		if (isOpen) {
+			blockScroll();
+		} else {
+			allowScroll();
+		}
+	}, [isOpen, blockScroll, allowScroll]);
+
+
     return ( 
     <>
-    <nav className="navbar">
+    <nav className={isOpen ? "navbar active" : "navbar"} >
             <div className="overlap">
                 <img className="backround" alt="Backround" src={backround} />
             </div>
@@ -25,6 +37,9 @@ function Navbar() {
                     <li>
                         <div className="fabar" onClick={toggleMenu}>
                             <FaBars />
+                        </div>
+                        <div className="close" onClick={toggleMenu}>
+                        <IoClose/>
                         </div>
                         <a href="/search">
                             <div className="bigsize">
@@ -89,6 +104,7 @@ function Navbar() {
                 </ul>
             </div>
         </nav>
+        
         <nav className={isOpen ? "menu active" : "menu"} >
             <ul>
                 <li>
