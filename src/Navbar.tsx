@@ -28,7 +28,8 @@ function Navbar() {
 
     return ( 
     <>
-    <nav className={isOpen ? "navbar active" : "navbar"} >
+    <nav className={isOpen ? "navbar active " : "navbar "} >
+        <div className="flexcenter innerwidth">
             <div className="overlap">
                 <img className="backround" alt="Backround" src={backround} />
             </div>
@@ -102,6 +103,7 @@ function Navbar() {
                         </a>
                     </li>
                 </ul>
+            </div>
             </div>
         </nav>
         

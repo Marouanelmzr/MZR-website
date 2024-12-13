@@ -24,6 +24,7 @@ a:hover {
 }
 
 body {
+  background-color: #EDDDCB;
   overflow-x: hidden;
   margin: 0;
   display: center;
@@ -32,16 +33,28 @@ body {
   min-height: 100vh;
 }
 
+.innerwidth {
+  width: 100%;
+}
+
+.flexcenter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0%;
+}
+
+
 .navbar {
   position:fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
   background-color: #191715;
   padding: 10px;
   display: flex;
   align-items: center;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
   max-height: 113px;
 
@@ -118,7 +131,7 @@ left: 0%;
 .navbar .mzrlogo {
 position: relative;
 margin-left: 0;
-margin-right: 3.2%;
+margin-right: 3%;
   
  }
 
@@ -165,6 +178,28 @@ height: 117px ;
 
 }
 
+.allproducts {
+  margin-top: 113px;
+  z-index: 3;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 2rem;
+  
+  }
+
+ .allproducts .Searchbar {
+  display: flex;
+  margin-left: 15rem;
+
+}
+
+.allproducts .Products {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15rem;
+
+}
+
 .icons {
   width: 20px;
   position: relative;
@@ -202,6 +237,12 @@ background-color: #FFC573;
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+@media (min-width : 1280px) {
+  .innerwidth {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
 @media (max-width : 979px) {
   .navbar {
     gap: 0px;
