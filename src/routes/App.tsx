@@ -1,7 +1,9 @@
 import './App.css'
-import Navbar from './Navbar'
-import Home from './Home'
-import Allproducts from "./allproducts"
+import Navbar from '../Navbar'
+import Home from '../pages/Home'
+import Shop from '../pages/Shop'
+import Footer from '../Components/Footer/Footer'
+import { Container } from 'react-bootstrap'
 
 function App() {
   let component
@@ -10,16 +12,17 @@ function App() {
     component = <Home />
     break
   case "/allproducts":
-    component = <Allproducts />
+    component = <Shop />
     break
  }
  return (
-  <div className='app'>
+  <Container className='app'>
     <Navbar />
     <div className='content'>
       {component}
     </div>
-  </div>
+    <Footer/>
+  </Container>
 )
 
 }

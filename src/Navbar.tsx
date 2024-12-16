@@ -5,7 +5,7 @@ import Shoppingbag from "./assets/Shoppingbag";
 import Loginicon from "./assets/Loginicone";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { useScrollBlock } from "./useScrollBlock";
+import { useScrollBlock } from "./hooks/useScrollBlock";
 import { IoClose } from "react-icons/io5";
 
 function Navbar() {

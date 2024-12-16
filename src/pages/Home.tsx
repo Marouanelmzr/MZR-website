@@ -1,5 +1,4 @@
-import Shopnow from "./Components/Shopnow";
-import Shearchbar from "./Components/Searchbar";
+import Shopnow from "../Components/Bouttons/Shopnow";
 
 function Home() {
 return (
